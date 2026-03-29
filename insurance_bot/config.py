@@ -1,6 +1,6 @@
 """
-Configuration module for AutoGuard Insurance Agent
-Handles environment variables, logging, and global state
+Configuration module for generic Auto Insurance Agent
+Handles environment variables, logging, and global mock state
 """
 
 import os
@@ -24,25 +24,13 @@ logger = logging.getLogger(__name__)
 
 # GLOBAL VARIABLES
 session_manager = None
-selected_plan_name = None
-auth_token = None
-registrationNo = None
-phoneNo = None
-quoteId = None
-user_profile = {}
-selected_addons = []
-last_quote_response = None
-temp_addons_storage = {}
 
-# Store latest vehicle details from registration API
+# Store latest vehicle details for current session
 vehicle_details = {
-    "registrationNo": None,
+    "license_plate": None,
     "make": None,
     "model": None,
-    "variant": None,
-    "registrationDate": None,
-    "fuelType": None,
-    "registrationCity": None
+    "year": None
 }
 
 # Session storage for managing conversations

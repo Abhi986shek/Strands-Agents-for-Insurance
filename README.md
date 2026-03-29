@@ -1,8 +1,9 @@
-# AutoGuard Strands Agent
-A modular customer support agent for AutoGuard Insurance built with Strands SDK - a code-first framework for building AI agents with Claude 3.5 Sonnet.
+# Insurance Bot Agent Framework
+
+A modular, mock customer support agent for Auto Insurance built with Strands SDK - a code-first framework for building AI agents with Claude 3.5 Sonnet.
 
 ## What is Strands?
-Strands is a modern SDK that replaces Amazon Bedrock Agents, offering:
+Strands is a modern SDK that offers:
 
 - Code-first approach: Define agents, tools, and prompts in Python code
 - Direct tool calls: Python functions decorated with @tool instead of action groups
@@ -10,49 +11,44 @@ Strands is a modern SDK that replaces Amazon Bedrock Agents, offering:
 - Better developer experience: No console configuration needed
 
 ## Features
-- Complete motor insurance purchase journey
-- OTP verification and secure authentication
-- Vehicle registration validation
-- Dynamic quote generation with multiple plans
-- Add-on selection and IDV customization
-- Secure payment link generation
+- Complete motor insurance purchase journey illustration
+- Authentication flow (Mock OTP verification)
+- Vehicle registration validation simulation
+- Dynamic quote generation with multiple tiers
+- Add-on selection and customization options
+- Secure payment link generation stub
 - Session management
 
-Project Structure
+## Project Structure
 
 ```
-AUTOGUARD STRANDS AGENT/
+STRANDS-AGENTS-FOR-INSURANCE/
 ├── insurance_bot/
 │   ├── tools/
 │   │   ├── __init__.py
-│   │   ├── check_vehicle_registration.py
-│   │   ├── create_payment_link.py
-│   │   ├── get_available_addons_for_selected_plan.py
-│   │   ├── get_available_plans_with_prices.py
-│   │   ├── get_idv_values.py
-│   │   ├── get_motor_quote.py
-│   │   ├── save_motor_quote.py
-│   │   ├── send_otp.py
-│   │   └── verify_otp.py
+│   │   ├── auth_tools.py
+│   │   ├── vehicle_tools.py
+│   │   ├── quote_tools.py
+│   │   ├── payment_tools.py
+│   │   └── faq_tools.py
 │   ├── agent.py
 │   ├── app.py
 │   ├── config.py
 │   ├── routes.py
 │   ├── utils.py
-│   ├── .env (this is for referance - create your .env file here)
 │   └── app.log
-└── Myenv
+├── README.md
 └── requirements.txt
 ```
 
-# Installation & Setup
-## Install dependencies
-```
+## Installation & Setup
+### Install dependencies
+```bash
 pip install -r requirements.txt
 ```
 
-# Running the Application
-## Run as module 
-```
+## Running the Application
+### Run as module 
+```bash
 python -m insurance_bot.app
 ```
